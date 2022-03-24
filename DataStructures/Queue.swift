@@ -35,7 +35,13 @@ class Queue{
     }
     
     func showFront(queue:[String])-> String{
-        return "Front of queue: \(queue.first)"
+        if queue.count > 0 {
+            return "Front of queue: \(queue[0])"
+        }
+        else{
+            return "Queue is empty"
+        }
+        
     }
         
 }

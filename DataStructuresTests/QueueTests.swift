@@ -35,6 +35,24 @@ class QueueTests: XCTestCase {
         }
     }
     
+    func testQueueShow(){
+        let queue = Queue()
+        let testValues = [(inputValue: ["1","2","3","4"], expected: "The Queue: 1, 2, 3, 4, "),(inputValue: ["4"], expected: "The Queue: 4, "), (inputValue: [], expected: "The Queue: ")]
+        for testValue in testValues {
+            let actual = queue.show(queue: testValue.inputValue)
+            XCTAssertEqual(actual, testValue.expected)
+        }
+    }
+    
+    func testQueueShowFront(){
+        let queue = Queue()
+        let testValues = [(inputValue: ["1","2","3","4"], expected: "Front of queue: 1"),(inputValue: ["4"], expected: "Front of queue: 4"), (inputValue: [], expected: "Queue is empty")]
+        for testValue in testValues {
+            let actual = queue.showFront(queue: testValue.inputValue)
+            XCTAssertEqual(actual, testValue.expected)
+        }
+    }
+    
     
     
 

@@ -7,7 +7,8 @@
 
 import Foundation
 
-class Stack {
+class Stack: ObservableObject {
+    
     func peek(stack: [String])-> String{
         if stack.count == 0{
             return "Empty"
