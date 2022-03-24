@@ -34,4 +34,19 @@ class Stack: ObservableObject {
         }
         return returnStack
     }
+    
+    func isFull(stack:[String]) -> Bool {
+        if stack.count >= 10 {
+            return true
+        } else {
+            return false
+        }
+    }
+    func isEmpty(stack:[String]) -> Bool {
+        if stack.count == 0 {
+            return true
+        } else {
+            return false
+        }
+    }
 }

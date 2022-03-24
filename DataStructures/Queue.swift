@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Queue{
+class Queue: ObservableObject {
     func enqueue(queue: [String], item: String)-> [String]{
         var returnQueue = queue
         returnQueue.append(item)
