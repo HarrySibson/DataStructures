@@ -16,7 +16,7 @@ struct QueueView: View {
                 Spacer()
                 Button("Enqueue",action:{
                     startingQueue = queue.enqueue(queue: startingQueue, item: "\(startingQueue.count+1)" )
-                })
+                }).disabled(queue.isFull(queue: startingQueue))
                 Spacer()
                 Button("Dequeue",action: {
                     startingQueue = queue.dequeue(queue: startingQueue)
